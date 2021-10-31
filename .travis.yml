@@ -8,13 +8,3 @@ before_install:
 
 script:
   - docker run -e CI=true siddeshvr/docker-react npm run test
-
-deploy:
-  provider: elasticbeankstalk
-  region: "ap-south-1"
-  app: "docker-react"
-  env: "Docker-env"
-  bucket_name: "elasticbenakstalk-ap-south-1-306476627547"
-  bucket_path: "docker-react"
-  on:
-    branch: master
